@@ -10,7 +10,7 @@ year2 = int(input("\nIngrese el año: "))
 mounth2 = int(input("Ingrese el mes: "))
 day2 = int(input("Ingrese el dia: "))"""
 
-year1 = 1991
+"""year1 = 1991
 mounth1 = 10
 day1 = 18
 
@@ -106,11 +106,11 @@ if year1 == year2:
 elif year1 < year2:
     CalculateDaysSmaller(year1, mounth1, day1, year2, mounth2, day2)
 else:
-    CalculateDaysGreater(year1, mounth1, day1, year2, mounth2, day2)
+    CalculateDaysGreater(year1, mounth1, day1, year2, mounth2, day2)"""
 
 
 
-"""#1 por la IA
+#1 por la IA
 #Importamos la clase datetime desde el módulo datetime.
 from datetime import datetime
 
@@ -142,4 +142,4 @@ fecha2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")
 
 # Calcular y mostrar la diferencia en días
 dias_diferencia = diferencia_de_dias(fecha1, fecha2)
-print(f"La diferencia en días entre {fecha1} y {fecha2} es de {dias_diferencia} días.")"""
+print(f"La diferencia en días entre {fecha1} y {fecha2} es de {dias_diferencia} días.")
