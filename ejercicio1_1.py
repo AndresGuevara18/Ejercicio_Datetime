@@ -5,24 +5,25 @@ print("1) DIFERENCIA DE DIAS: escriba un programa que tome dos fechas como entra
 """fecha1 = input("Ingrese la primera fecha (YYYY-MM-DD): ")
 fecha2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")"""
 
-"""#DaysSmaller
+"""#yearSmaller
 date1 = "1991-10-18"
 date2 = "2024-05-17"
 """
 
-"""#DaysGreater
+#YearGreater
 date1 = "2024-05-17"
 date2 = "1991-10-18"
-"""
+
 
 """#MounthSmaller
-date1 = "2022-05-17"
+date1 = "2022-06-17"
 date2 = "2022-06-27"
 """
 
-#MounthGreater
+"""#MounthGreater
 date1 = "2022-06-27"
 date2 = "2022-06-17"
+"""
 
 date1 = datetime.strptime(date1, "%Y-%m-%d")
 date2 = datetime.strptime(date2, "%Y-%m-%d")
@@ -42,7 +43,7 @@ print(f"Año 1 : {year1} Mes: {mounth1}  Dia {day1}--- Año 2: {year2} Mes: {mou
 days = 365
 
 #Si la primer fecha es MENOR que la segunda
-def CalculateDaysSmaller(year1, year2):
+def CalculateYearSmaller(year1, year2):
     dif_year = (year2 - year1) 
     days_years_tot = dif_year * days 
 
@@ -58,7 +59,7 @@ def CalculateDaysSmaller(year1, year2):
     print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days}\n DIAS TOTAL: {total_days}")
 
 #si la primer fecha MAYOR que la segunda
-def CalculateDaysGreater(year1, year2):
+def CalculateYearGreater(year1, year2):
     dif_year = (year1 - year2)
     days_years_tot = dif_year * days 
 
@@ -73,8 +74,8 @@ def CalculateDaysGreater(year1, year2):
     
     print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days}\n DIAS TOTAL: {total_days}")
 
-#si el primer mes es MENOR que el segundo
-def CalculateMounthSmaller(date1, date2):
+#si el primer mes es MENOR que el segundo // o dia
+def CalculateMounthSmaller():
     
     print(f"fecha 1: {date1} --- fecha 2: {date2}")
 
@@ -85,48 +86,27 @@ def CalculateMounthSmaller(date1, date2):
 
     print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days} \n DIAS TOTAL: {total_days}")
 
-#Si el primer mes es MAYOR que el segundo
-def CalculateMounthGreater(date1, date2):
+#Si el primer mes es MAYOR que el segundo // o dia
+def CalculateMounthGreater():
     print(f"fecha 1: {date1} --- fecha 2: {date2}")
     date1_days = int(date1.strftime("%j"))
     date2_days = int(date2.strftime("%j"))
     total_days =  date1_days  - date2_days
     print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days} \n DIAS TOTAL: {total_days}")
 
-#Si el primer dia es MENOR que el segundo
-def CalculateDaysDaysSmaller(date1, date2):
-    print(f"fecha 1: {date1} --- fecha 2: {date2}")
-
-    date1_days = int(date1.strftime("%j"))
-    date2_days = int(date2.strftime("%j"))
-
-    total_days =  date2_days  - date1_days
-
-    print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days} \n DIAS TOTAL: {total_days}")
-
-#Si el primer dia es MAYOR que el segundo
-def CalculateDaysDaysGreater(date1, date2):
-    print(f"fecha 1: {date1} --- fecha 2: {date2}")
-
-    date1_days = int(date1.strftime("%j"))
-    date2_days = int(date2.strftime("%j"))
-
-    total_days =  date1_days - date2_days 
-
-    print(f"Fecha 1 dias transcurridos: {date1_days}\nfecha 2 dias transcurridos: {date2_days} \n DIAS TOTAL: {total_days}")
 
 #CONDICIONAL
 if year1 == year2:
     if mounth1 == mounth2:
         if day1 < day2:
-           CalculateDaysDaysSmaller(date1, date2)
+           CalculateMounthSmaller()
         else:
-            CalculateDaysDaysGreater(date1, date2)
-    elif mounth1 < mounth2:
-        CalculateMounthSmaller(date1, date2)
+            CalculateMounthGreater()
+    """elif mounth1 < mounth2:
+        CalculateMounthSmaller()
     else:
-        CalculateMounthGreater(date1, date2)
+        CalculateMounthGreater()"""
 elif year1 < year2:
-    CalculateDaysSmaller(year1, year2)
+    CalculateYearSmaller(year1, year2)
 else:
-    CalculateDaysGreater(year1, year2)
+    CalculateYearGreater(year1, year2)
