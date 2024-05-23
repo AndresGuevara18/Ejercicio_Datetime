@@ -5,10 +5,13 @@ print("4) EDAD EN DIAS: Escribe un programa que calcule la edad de una persona e
 
 #date1 = input("Ingresa tu fecha de cumpleaños (YYYY-MM-DD): ") 
 date1 = "1991-10-18"
-date1 = datetime.strptime(date1, "%Y-%m-%d")
-year1 = int(date1.strftime("%Y"))
 
+# Convertir las cadenas de entrada en objetos datetime
+date1 = datetime.strptime(date1, "%Y-%m-%d")
 ahora = datetime.now()
+
+#covertir en int el año de la fecha ingresada
+year1 = int(date1.strftime("%Y"))
 year2 = int(ahora.strftime("%Y"))
 
 days = 365
