@@ -10,11 +10,11 @@ date1 = "2024-05-23"
 days_more = 25
 
 date1 = datetime.strptime(date1, "%Y-%m-%d")
-print(date1)
+print(f"Fecha inicio: {date1.strftime('%Y-%m-%d')}")
 
 fecha_vencimiento = date1 + timedelta(days=days_more)
 
-print(f"Fecha vencimiento: {fecha_vencimiento}")
+print(f"Fecha vencimiento: {fecha_vencimiento.strftime('%Y-%m-%d')}")
 
 
 

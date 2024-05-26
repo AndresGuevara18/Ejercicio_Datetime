@@ -10,12 +10,13 @@ date1 = "2024-05-17"
 
 # Convertir la cadena de fecha en un objeto datetime
 date1 = datetime.strptime(date1, "%Y-%m-%d")
-print(date1)
+print(date1.strftime('%Y-%m-%d'))
 
-print(date1.strftime("%d \n"))
+print(f"{date1.day}\n")
 
 # Calcular el primer día de la semana (asumiendo que la semana empieza el lunes)
+#El método weekday() en la clase datetime del módulo datetime se utiliza para obtener el día de la semana de un objeto datetime. 
+#El valor devuelto es un número entero que representa el día de la semana, donde: 0 corresponde a lunes (Monday) hasta 6 corresponde a domingo (Sunday)
 start_of_week = date1 - timedelta(days=date1.weekday())
-print(start_of_week)
-start_of_week = start_of_week.strftime("%d")
-print(start_of_week)
+print(start_of_week.strftime('%Y-%m-%d'))
+print(start_of_week.day)

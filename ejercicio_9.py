@@ -24,12 +24,12 @@ def obtener_fachas_rango(date1, date2):
             #agregar cada fecha a la lista
             fechas_rango.append(primer_fecha.strftime('%Y-%m-%d'))
             #avanzando un día con timedelta(days=1)
-            print(fechas_rango)
             primer_fecha += timedelta(days=1)
       
       return fechas_rango
 
 fechas = obtener_fachas_rango(date1, date2)
+
 
 print("Las fechas son:\n")
 

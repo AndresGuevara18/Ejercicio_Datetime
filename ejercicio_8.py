@@ -12,8 +12,8 @@ fecha2 = datetime.strptime(fecha2, "%Y-%m-%d")
 
 print(f"fecha 1: {fecha1} ----  fecha 2: {fecha2}")
 
-year1 = int(fecha1.strftime("%Y"))
-year2 = int(fecha2.strftime("%Y"))
+year1 = fecha1.year
+year2 = fecha2.year
 
 print(f"Año 1: {year1} ----  Año 2: {year2}")
 

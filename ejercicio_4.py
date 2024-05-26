@@ -4,7 +4,7 @@ print("4) EDAD EN DIAS: Escribe un programa que calcule la edad de una persona e
       "la fecha actual") 
 
 #date1 = input("Ingresa tu fecha de cumpleaños (YYYY-MM-DD): ") 
-date1 = "1991-10-18"
+"""date1 = "1991-10-18"
 
 # Convertir las cadenas de entrada en objetos datetime
 date1 = datetime.strptime(date1, "%Y-%m-%d")
@@ -32,5 +32,20 @@ def CalculateDaysBirth(year1, year2):
 
     print(f"Dias en años cumplidos: {date1_birt}")
 
-if year1 < year2:
-    CalculateDaysBirth(year1, year2)
+
+CalculateDaysBirth(year1, year2)"""
+
+
+
+#date1 = input("Ingresa tu fecha de cumpleaños (YYYY-MM-DD): ") 
+date1 = "1991-10-18"
+
+# Convertir la cadena de entrada en un objeto datetime
+date_birth = datetime.strptime(date1, "%Y-%m-%d")
+date_act = datetime.now()
+
+# Calcular la diferencia en días
+diferen = date_act - date_birth
+days_birth = diferen.days
+
+print(f"Feha nacimiento: {date_birth.strftime('%Y-%m-%d')}\nFecha actual: {date_act.strftime('%Y-%m-%d')}\nEdad en dias: {days_birth}")

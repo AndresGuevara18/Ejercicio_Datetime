@@ -25,14 +25,15 @@ def proxima_fecha_dia_semana(fecha_inicial, dia_semana):
     
     # Obtener el índice del día de la semana buscado
     #La función lower() en Python se utiliza para convertir todos los caracteres de una cadena de texto a minúsculas. 
-    #Esto es útil cuando se desea realizar comparaciones de cadenas de texto sin tener en cuenta las diferencias entre mayúsculas 
-    #y minúsculas, asegurando que las comparaciones sean consistentes.
     dia_semana_buscado = dias_semana[dia_semana.lower()]
     
     # Calcular la diferencia de días hasta el próximo día de la semana
     #La función weekday() es un método del objeto datetime en Python que devuelve el día de la semana de una fecha específica. 
     #Los días de la semana se representan como enteros donde el lunes es 0 y el domingo es 6.
-    diferencia_dias = (dia_semana_buscado - fecha_inicial.weekday() + 7) % 7
+
+    #El uso del operador % 7 garantiza que la diferencia de días sea siempre un número positivo en el rango de 0 a 6. Esto es 
+    #importante porque queremos un número de días que sea válido en el contexto de una semana (máximo 6 días de diferencia).
+    diferencia_dias = (dia_semana_buscado - fecha_inicial.weekday() + 7) % 7 #% pra diferencia entre el valor obtenido de 
     if diferencia_dias == 0:
         diferencia_dias = 7  # Si la diferencia es 0, significa que es hoy, así que se busca el próximo
     
@@ -42,9 +43,8 @@ def proxima_fecha_dia_semana(fecha_inicial, dia_semana):
     return proxima_fecha.strftime('%Y-%m-%d')
 
 
-
 fecha_inicial = "2024-05-02"
-dia_semana = "lunes"
+dia_semana = "jueves"
 
 proxima_fecha = proxima_fecha_dia_semana(fecha_inicial, dia_semana)
 
