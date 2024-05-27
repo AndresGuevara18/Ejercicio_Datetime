@@ -6,8 +6,8 @@ print("1) DIFERENCIA DE DIAS: escriba un programa que tome dos fechas como entra
 date2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")"""
 
 #yearSmaller
-#date1 = "1991-10-18"
-#date2 = "2024-05-17"
+date1 = "1991-10-18"
+date2 = "2024-05-26"
 
 #YearGreater
 #date1 = "2024-05-17"
@@ -29,8 +29,8 @@ date2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")"""
 #date1 = "2022-06-30"
 #date2 = "2022-06-17"
 
-date1 = "2016-06-30"
-date2 = "2016-06-30"
+#date1 = "2016-06-30"
+#date2 = "2016-06-30"
 
 date1 = datetime.strptime(date1, "%Y-%m-%d")
 date2 = datetime.strptime(date2, "%Y-%m-%d")
@@ -72,8 +72,9 @@ def CalculateYearSmaller(year1, year2):
 
     date1_days = int(date1.strftime("%j"))
     date2_days = int(date2.strftime("%j"))
-    total_days = (days_years_tot - date1_days  ) + date2_days + (contador_days_more * 2)
+    total_days = (days_years_tot - date1_days  ) + date2_days + contador_days_more
     print(f"La diferencia en días entre {date1.strftime('%Y-%m-%d')} y {date2.strftime('%Y-%m-%d')} es de => {total_days} días.")
+    return total_days
 
 #si la primer fecha MAYOR que la segunda
 def CalculateYearGreater(year1, year2):
@@ -82,8 +83,9 @@ def CalculateYearGreater(year1, year2):
 
     date1_days = int(date1.strftime("%j"))
     date2_days = int(date2.strftime("%j"))
-    total_days = (days_years_tot - date2_days  ) + date1_days + (contador_days_more * 2)
+    total_days = (days_years_tot - date2_days  ) + date1_days 
     print(f"La diferencia en días entre {date2.strftime('%Y-%m-%d')} y {date1.strftime('%Y-%m-%d')} es de => {total_days} días.")
+    return total_days
 
 #si el primer mes es MENOR que el segundo // o dia
 def CalculateMounthSmaller():
@@ -91,6 +93,7 @@ def CalculateMounthSmaller():
     date2_days = int(date2.strftime("%j"))
     total_days =  date2_days  - date1_days
     print(f"La diferencia en días entre {date1.strftime('%Y-%m-%d')} y {date2.strftime('%Y-%m-%d')} es de => {total_days} días.")
+    return total_days
 
 #Si el primer mes es MAYOR que el segundo // o dia
 def CalculateMounthGreater():
@@ -98,7 +101,7 @@ def CalculateMounthGreater():
     date2_days = int(date2.strftime("%j"))
     total_days =  date1_days  - date2_days
     print(f"La diferencia en días entre {date2.strftime('%Y-%m-%d')} y {date1.strftime('%Y-%m-%d')} es de => {total_days} días.")
-
+    return total_days
 
 #CONDICIONAL
 if year1 == year2:

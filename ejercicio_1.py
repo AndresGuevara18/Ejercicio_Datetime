@@ -33,7 +33,7 @@ fecha2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")"""
 
 #Variables prueba
 fecha1 = "1991-10-18"
-fecha2 = "2024-05-25"
+fecha2 = "2024-05-26"
 
 # Cllamado funcion
 diferencia_de_dias(fecha1, fecha2)
