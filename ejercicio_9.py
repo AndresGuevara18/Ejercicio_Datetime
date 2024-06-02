@@ -6,7 +6,7 @@ print("9) INTERVALO DE FECHAS: Desarrolla un programa que tome dos fechas como e
 """date1 = input("Ingrese la primer fecha (YYYY-MM-DD): ")
 date2 = input("Ingrese la segunda fecha (YYYY-MM-DD): ")"""
 
-date1 = "2024-01-01"
+date1 = "2004-01-01"
 date2 = "2024-05-23"
 
 def obtener_fachas_rango(date1, date2):

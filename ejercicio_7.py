@@ -16,7 +16,10 @@ print(f"{date1.day}\n")
 
 # Calcular el primer día de la semana (asumiendo que la semana empieza el lunes)
 #El método weekday() en la clase datetime del módulo datetime se utiliza para obtener el día de la semana de un objeto datetime. 
-#El valor devuelto es un número entero que representa el día de la semana, donde: 0 corresponde a lunes (Monday) hasta 6 corresponde a domingo (Sunday)
+#El valor devuelto es un número entero que representa el día de la semana, donde: 0 corresponde a lunes (Monday) 
+#hasta 6 corresponde a domingo (Sunday)
+
+#print(date1.weekday())#numero dia de la semana
 start_of_week = date1 - timedelta(days=date1.weekday())
 print(start_of_week.strftime('%Y-%m-%d'))
 print(start_of_week.day)
